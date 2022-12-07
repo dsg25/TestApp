@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SwiftUIView.swift
 //  TestApp
 //
 //  Created by Kocha on 07.12.2022.
@@ -8,17 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SwiftUIView: View {
     var body: some View {
-        Text("Hello, MUD")
-            .padding()
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SwiftUIView()
     }
 }
-
-// Test second commit
