@@ -10,8 +10,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, MUD")
+        
+        Text("Test Game")
             .padding()
+            .background(Color.yellow)
+            .font(.custom("AvenirNext-Bold", size: 42))
     }
 }
 
@@ -22,3 +25,4 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 // Test second commit
+//  Просто нажал Push
