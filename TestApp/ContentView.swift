@@ -26,3 +26,4 @@ struct ContentView_Previews: PreviewProvider {
 
 // Test second commit
 //  Просто нажал Push
+// Из дома запись
