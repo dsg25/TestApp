@@ -10,58 +10,40 @@ import SwiftUI
 
 struct StartView: View {
     
-    @State var bigWord = ""
-    @State var player1 = ""
-    @State var player2 = ""
+     @State var bigWord = ""
+     @State var player1 = ""
+     @State var player2 = ""
     
     var body: some View {
        
         VStack {
             
-            Text("Test Game")
-                .padding()
-                .font(.custom("AvenirNext-Bold", size: 42))
-                .frame(maxWidth: .infinity)
-                .background(Color("FirstPlayer"))
-                .foregroundColor(.white)
+            TitleText(text: "Test Game")
             
-            TextField("Введи слово, бля!",
-                      text: $bigWord)
-                
-                .font(.headline)
-                .padding()
-                .background(Color.white)
-                .cornerRadius(12)
+            WordsTextField(word: $bigWord, placeholder: "Введите большое слово")
                 .padding(20)
                 .padding(.top, 32)
             
-            TextField("Игрок 1",
-                      text: $player1)
-                           
-                .font(.headline)
-                .padding()
-                .background(Color.white)
-                .cornerRadius(12)
+            WordsTextField(word: $player1, placeholder: "Игрок 1")
                 .padding(.horizontal, 20)
-                           
-            TextField("Игрок 2",
-                  text: $player2)
-                       
-                .font(.headline)
-                .padding()
-                .background(Color.white)
-                .cornerRadius(12)
+
+            WordsTextField(word: $player2, placeholder: "Игрок 2")
                 .padding(.horizontal, 20)
             
-           
-           
-                
-        .background(Image("BG"))
-        
-        
-        }
+                 
+            Button(action: {print("Start Button Tapped")}) {
+                Text("Старт")
+                .font(.custom("AvenirNext-Bold", size: 30))
+                    .foregroundColor(.white)
+                    .padding()
+                    .padding(.horizontal, 64 )
+                    .background(Color("FirstPlayer"))
+                    .cornerRadius(100)
+                    .padding(.top)  }
+
+                                  
+             } .background(Image("BG"))
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
