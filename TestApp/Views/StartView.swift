@@ -14,26 +14,31 @@ struct StartView: View {
      @State var player1 = ""
      @State var player2 = ""
     
+    @State var isShowedGame = false
+    
     var body: some View {
        
         VStack {
             
             TitleText(text: "Test Game")
             
-            WordsTextField(word: $bigWord, placeholder: "Введите большое слово")
+            WordsTextField(word: $bigWord,
+                           placeholder: "Введите большое слово")
                 .padding(20)
                 .padding(.top, 32)
             
-            WordsTextField(word: $player1, placeholder: "Игрок 1")
+            WordsTextField(word: $player1,
+                           placeholder: "Игрок 1")
                 .padding(.horizontal, 20)
 
-            WordsTextField(word: $player2, placeholder: "Игрок 2")
+            WordsTextField(word: $player2,
+                           placeholder: "Игрок 2")
                 .padding(.horizontal, 20)
+             
             
-                 
             Button(action: {print("Start Button Tapped")}) {
-                Text("Старт")
-                .font(.custom("AvenirNext-Bold", size: 30))
+            Text("Старт")
+                    .font(.custom("AvenirNext-Bold", size: 30))
                     .foregroundColor(.white)
                     .padding()
                     .padding(.horizontal, 64 )
@@ -52,6 +57,3 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-// Test second commit
-//  Просто нажал Push
-// Из дома запись
